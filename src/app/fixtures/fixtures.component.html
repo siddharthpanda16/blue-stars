@@ -1,0 +1,46 @@
+<div id="fixtures-root-div">
+  <section class="fixtures-main">
+    <section>
+      <label id="win">
+        WIN
+      </label>
+      <label id="lose">
+        LOSE
+      </label>
+      <label id="upcoming">
+        UPCOMING
+      </label>
+    </section>
+    <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">DATE</th>
+            <th scope="col">OPPOSITION</th>
+            <th scope="col">GROUND</th>
+            <th scope="col">RESULT</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr [class]="game.result == 'win' ?'bg-success':game.result == 'lose' ? 'bg-danger':null" *ngFor="let game of games" ng-class>
+            <th scope="row">{{game.id}}</th>
+            <td >{{ game.gameday }}</td>
+            <td>{{ game.opposition }}</td>
+            <td>{{game.venue}}</td>
+            <td >{{game.result}}</td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </section>
+</div>

@@ -1,0 +1,28 @@
+<div id="home-root-div">
+    <div class="home-main">
+      <div id="team_cover">
+        <h3>Summer T-20 DCL Champions  </h3>
+      </div>
+    </div>
+    <div class="full" >
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" *ngFor="let card of cards">
+            <div class="card-header  border-light">{{card.type}}</div>
+            <div class="card-body">
+              <h5 class="card-title">{{card.title}}</h5>
+              <p class="card-text">{{card.details}}</p>
+              <div class="card-footer bg-transparent border-light">{{card.footer}}</div>
+            </div>
+        </div>
+    </div>
+   
+    <div><h5>Upcoming Matches</h5></div>
+    <div id="upcomingDiv" class="card bg-light mb-3 text-info" style="max-width: 18rem;" *ngFor="let game of games">
+            <div class="card-header">{{ game.tournament }}</div>
+            <div class="card-body ">
+                <h6 class="card-title">{{ game.gameday }}</h6>
+                <h6 class="card-text">{{ game.opposition }}</h6>
+            </div>
+            <div class="card-footer bg-transparent border-dark">{{ game.venue.name }}<a target="_blank" [href]="game.venue.url"><img src="../../assets/direction.png"></a> </div>
+    </div>
+</div>
+

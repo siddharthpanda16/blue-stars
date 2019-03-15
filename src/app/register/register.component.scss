@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  font-family: 'Roboto';
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  text-align: center;
+  height: 100%;
+  background: #D09EA6; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #00659C, #6A1B9A); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #00659C, #6A1B9A); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #00695C, #6A1B9A); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #00695C, #6A1B9A); /* Standard syntax */
+  overflow-x: hidden;
+}
+
+.step-bar {
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.8em;
+  margin-top: 40px;
+  text-align: center;
+  padding-top:20px;
+}
+
+.step-bar li{
+  display: inline-block;
+  position: relative;
+  margin: 0px 30px; 
+  width: 120px;
+}
+
+.step-bar .number{
+  transition: background-color 0.1s linear, color 0.1s linear;
+  display: inline-block;
+  position: relative;
+  color: #777;
+  background-color: #fff; 
+  width: 20px;
+  padding: 8px 5px;
+  margin-bottom: 4px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.step-bar .line {
+  background-color: #fff;
+  width: 180px;
+  height: 5px;
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  z-index: 0;
+}
+
+.step-bar .active {
+  background-color: #007bff;;
+  color: #fff;
+}
+
+.register-form {
+  display: inline-block;
+  background: #fff;
+  padding: 20px 25px;
+  width: 300px;
+  text-align: center;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  position: relative;
+}
+
+.error {
+  border: 1px solid #E57373;
+  background-color: #FFEBEE;
+}
+
+.error-text {
+  text-align: left;
+  padding-left: 10px;
+  font-size: 0.7em;
+  color: #E57373;
+}
+
+h1 {
+  margin: 60px 0;
+  display: block;
+  color: #fff;
+  font-size: 1.15em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.register-form h2 {
+  font-size: 1em;
+  color: #777;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.register-form input {
+  padding: 15px; 
+  margin: 5px 0;
+  width: 260px;
+}
+
+.register-form input::placeholder {
+  color: #aaa;
+}
+
+.register-form input.error::placeholder {
+  color: #555;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: #007bff;;
+  color: #fff;
+  margin: 25px 0  10px 0;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:hover {
+  background-color: blue;
+}
+
+.disabled {
+  background-color: #aaa; 
+}
+
+.disabled:hover {
+  background-color: #aaa; 
+  cursor: default
+}
+
+.account-setup, .finish-step, .user-details {
+  transition: 1s all ease-in-out;
+  display: inline-block;
+  position: absolute;
+}
+
+.account-setup {
+  left: calc(50% - 150px);
+}
+
+.finish-step, .user-details {
+  left: 1400px;
+}
+
+.line {
+  transition: all 1s ease-in-out;
+  background: linear-gradient(to right, #007bff 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.line-active {
+  background-position: left bottom;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.8em;
+  padding-left: 5px;
+  color: #444;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+
+.accept-conditions {
+  margin-top: 20px;
+}
+
+input::placeholder { 
+  color: black;
+}
+
+.error{
+    color:red;
+}
+
+#register-main-id {
+    background: steelblue;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 40px;
+    height: 175px;
+}
+
+.finish-step.register-form{
+    .btn{
+        margin-right: 10px;
+    }
+}
+
+.secondNext{
+    margin-left: 3px;
+}
+//Switch Button - Student
+.switch-field {
+    font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+    padding: 40px;
+      overflow: hidden;
+  }
+
+  .swtch-left{
+    margin-left: 20px;
+  }
+
+  .img-width{
+    width: 40px;
+  }
+  
+  .img-width2{
+    width: 80px;
+  }
+
+
+  .no-padding{
+      padding: 10px 20px;
+  }
+
+  .switch-title {
+    margin-bottom: 6px;
+  }
+  
+  .switch-field input {
+      position: absolute !important;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      width: 1px;
+      border: 0;
+      overflow: hidden;
+  }
+  
+  .switch-field label {
+    float: left;
+  }
+  
+  .switch-field label {
+    display: inline-block;
+    width: 60px;
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: none;
+    padding: 6px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition:    all 0.1s ease-in-out;
+    -ms-transition:     all 0.1s ease-in-out;
+    -o-transition:      all 0.1s ease-in-out;
+    transition:         all 0.1s ease-in-out;
+  }
+  
+  .switch-field label:hover {
+      cursor: pointer;
+  }
+  
+  .switch-field input:checked + label {
+    background-color: #007bff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+  }
+  
+  .switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+  }
+
+@media(max-width: 600px) {
+    .step-bar .line {
+        display: none;
+    }
+
+    #register-main-id{
+        margin-top:20px;
+    }
+
+    .step-bar {
+        text-transform: uppercase;
+        color: white;
+        font-size: 0.8em;
+        margin-top: 20px;
+        text-align: center;
+        padding-top: 0px;
+    }
+
+    form{
+        margin-top:10px;
+    }
+
+    h1{
+        display: none;
+    }
+
+}
+
+@media (min-width:600px) and (max-width:1100px){
+    .step-bar .line{
+        background-color: #fff;
+        width: 108px;
+        height: 5px;
+        position: absolute;
+        top: 15px;
+        right: 43px;
+        z-index: 0;
+    }
+
+    .step-bar li {
+        display: inline-block;
+        position: relative;
+        margin: 0px 30px;
+        width: 65px;
+    }
+
+}

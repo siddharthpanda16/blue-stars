@@ -1,0 +1,52 @@
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .fixtures-main{
+
+        margin-top:15px;
+        width: 80%;
+        justify-self: center;
+    }
+
+    section{
+
+        label{
+            margin-left: 25px;
+            padding:7px;
+            color:white;
+        }
+        #win {
+            background: #28a745;
+        }
+        #lose {
+            background: #dc3545;
+        }
+        #upcoming {
+            background: black;
+        }
+    }
+}
+
+@media (max-width:800px){
+    div .fixtures-main {
+
+        font-size: 10px;
+        overflow-wrap: break-word;       
+        text-align: center;
+    } 
+
+}
+
+@media (max-width:700px){
+    div .fixtures-main {
+        text-align: center;
+        font-size: 6px;
+        overflow-wrap: break-word;   
+    } 
+}
+
+
+#fixtures-root-div{
+    margin-bottom: 30px;    
+}

@@ -1,0 +1,46 @@
+<header>
+    <div class="container">
+      <div class="app-header">
+  <div class="w-100 full-width display-flex">
+      <div id="home-header-left" class="display-flex w-50">
+          <figure class="align-center"><img src="../assets/teamlogo.png" routerLink="/" class="teamlogo" alt="Team Logo"></figure>
+          <h1 class="align-center left-margin left-margin-btns">Blue Stars Cricket Club</h1>  
+      </div>
+       
+      <div id="home-header-right" class="right-side-btns align-center w-50 mh-100">
+          <button *ngFor="let btnVal of headerBtns" type="button" [id]="btnVal.name" [routerLink]="btnVal.hrefVal" class="btn btn-primary btn-sm float-right margin-right">{{btnVal.name}}</button>
+      </div>
+  </div>
+  
+
+    <nav class="navbar navbar-expand-lg navbar-dark home-nav">
+      <section id="small-screen-menu">
+          <!-- <a class="navbar-brand left-margin-btns" id="home-menu-caption"  href="#">Menu</a> -->
+          <button class="navbar-toggler navbar-light bg-dark " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-center"></span>
+          </button>
+      </section>
+      
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" id="small-screen-btns">
+          <li class="nav-item" *ngFor="let menuBtn of headerMenuBtns">
+              <a *ngIf="menuBtn.name == 'DCL' || menuBtn.name == 'LIVE SCORE'" class="navbar-brand left-margin-btns extra-margin nav-item-btns" target="_blank" [href]="menuBtn.hrefVal">{{menuBtn.name}}</a>
+              <a *ngIf="!(menuBtn.name == 'DCL' || menuBtn.name == 'LIVE SCORE')" class="navbar-brand left-margin-btns extra-margin nav-item-btns" [routerLink]="menuBtn.hrefVal">{{menuBtn.name}}</a>
+          </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+    </nav>
+
+</div>
+
+<div class="teamlogo">
+
+</div>
+</div>
+</header>
+
+

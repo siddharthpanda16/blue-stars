@@ -1,0 +1,22 @@
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <h1>Contact Us!</h1>
+  <p>Say Hello! Or whatever you want!</p>
+  <div id="logo" class="icon-ic-drafts-24px"></div>
+  <input  name="name" formControlName="name" [class]="!success && submitted && messageForm.controls.name.errors ? (messageForm.controls.name.errors.required ? 'border border-danger' :'border border-success') : null" type="text" placeholder="Name" id="name" required />
+  <div *ngIf ="!success &&  submitted && messageForm.controls.name.errors" class="error">
+      <label *ngIf= "messageForm.controls.name.errors.required" class="alert-danger"> Name is required.</label>
+  </div>
+
+  <input name="email" formControlName="email" [class]="!success && submitted && messageForm.controls.email.errors ? (messageForm.controls.email.errors.required ? 'border border-danger' :'border border-danger') : null" type="email" placeholder="Email" id="email" required />
+  <div *ngIf ="!success && submitted && messageForm.controls.email.errors" class="error">
+      <label *ngIf= "messageForm.controls.email.errors.email" class="alert-danger"> Enter Valid Email.</label>
+      <label *ngIf= "messageForm.controls.email.errors.required" class="alert-danger"> Email is required.</label>
+  </div>
+
+  <textarea name="text" formControlName="text" [class]="!success && submitted && messageForm.controls.text.errors ? (messageForm.controls.text.errors.required ? 'border border-danger' :'border border-success') : null" placeholder="Message"></textarea>
+  <div *ngIf ="!success && submitted && messageForm.controls.text.errors" class="error">
+      <label *ngIf= "messageForm.controls.text.errors.required" class="alert-danger"> Message is required.</label>
+  </div>
+  <h4 *ngIf="success && submitted" class="bg-success"> You message is sumbmitted.</h4>
+  <button type="submit" class="btn btn-primary" >SUBMIT</button>
+</form>

@@ -1,0 +1,35 @@
+
+.more-main{
+    width: 100%;
+    display: flex;
+    margin-top: 2%;
+
+    .carousel-inner{
+        max-width:1000px; max-height:600px !important;
+    }
+    @media (min-width:700px){
+        #carouselExampleIndicators{
+            background-color: darkslategrey;
+            margin-left: 2%;
+            position: fixed;
+        }
+    }
+    @media (min-width:1100px){
+        #carouselExampleIndicators{
+            background-color: darkslategrey;
+            margin-left: 18%;
+            position: fixed;
+        }
+    }
+    
+    img{
+        background-size: cover;
+        height: 550px;
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+#more-root-div{
+    margin-bottom: 30px;    
+}

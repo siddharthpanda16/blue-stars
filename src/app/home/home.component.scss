@@ -1,0 +1,153 @@
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    #team_cover{
+        height:300px;
+        background-image: url("../../assets/team_cover.png") ;
+        object-fit: contain;         
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
+    }
+
+    
+
+    @media (max-width:450px) {
+        #team_cover {
+            height: 155px;
+            min-width: 330px;
+            background-image: url("../../assets/team_cover.png") ;
+            background-size: contain;
+        }
+    }
+
+    @media (max-width: 400px) {
+        #team_cover {
+            height: 141px;
+            min-width: 0px;
+
+            background-image: url("../../assets/team_cover.png");
+            background-size: contain;
+        }
+    }
+     
+    .full{
+        align-self:flex-end;
+
+        .card{
+            margin-right: 64px;
+            margin-top: 14px;
+            left: 32px;        
+        }
+    }
+
+    h5{
+        margin-top:10px;
+    }
+
+   /*  .card.bg-light{
+        margin-left: 25px;
+    } */
+    
+    .home-main{
+
+        margin-top:15px;
+        width: 80%;
+        display: flex;
+        justify-content: left;
+
+        &:hover{
+            -webkit-animation: zoomin 5s 1;
+            animation: zoomin 5s 1;
+        }
+        @-webkit-keyframes zoomin {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            100% {
+                -webkit-transform: scale(1.1);
+            }
+        }
+        @keyframes zoomin {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            100% {
+                -webkit-transform: scale(1.1);
+            }   
+        }
+        h3
+        {
+            color: white;
+            width: 100%;
+            bottom: 0px;
+            margin-top: calc(100% - 82%);
+            margin-left: calc(100% - 99%);
+
+           
+        }
+
+        @media(max-width:1100px)
+        {
+            h3 {
+                color: white;
+                width: 100%;
+                bottom: 0px;
+                margin-top: calc(100% - 69%);
+                margin-left: calc(100% - 99%);
+                font-size: 2rem;
+            }
+        }
+
+        @media(max-width:800px)
+        {
+            h3 {
+                color: white;
+                width: 100%;
+                bottom: 0px;
+                margin-top: calc(100% - 60%);
+                margin-left: calc(100% - 99%);
+                font-size: 2rem;
+            }
+        }
+
+        @media(max-width:700px)
+        {
+            h3 {
+                color: white;
+                width: 100%;
+                bottom: 0px;
+                margin-top: calc(100% - 62%);
+                margin-left: calc(100% - 99%);
+                font-size: 1rem;
+            }
+        }
+
+       
+        
+    }
+    img{
+        width: 20px;
+        margin-left: 10px;
+    }
+}
+
+
+
+  #carouselExampleIndicators{
+    width: 80%;
+    text-align: center;
+    align-self:flex-end;
+    img{
+        height: 350px;
+        width: 100%;
+        object-fit: fill;
+    }
+}
+
+#home-root-div{
+    margin-bottom: 30px;    
+}

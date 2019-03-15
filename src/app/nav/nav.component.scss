@@ -1,0 +1,188 @@
+.app-header{
+    position: absolute;
+    display:flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 134px;
+    background: url("../../assets/nav_cover.jpg");
+    width:100%
+}
+
+.teamlogo {
+    cursor: pointer;
+    margin-left: 20px;
+    height: 75px;
+    width: 150px;
+    align-self: center;  
+}
+
+.align-center {
+    align-self: center;
+}
+
+.left-margin {
+    margin-left: 15px;
+}
+
+.extra-margin{
+    margin-left: 2rem;
+}
+
+.left-margin-btns {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#007bff; 
+}
+
+@media(max-width:700px)
+{
+    #small-screen-menu{
+        margin-left: 75%;
+    }
+
+    #navbarSupportedContent{
+        margin-left: 57%;
+    }
+
+}
+
+
+.right-side-btns {
+    float: right;
+    /* width: 67%; */
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+
+.display-flex {
+    display: flex;
+}
+
+.home-nav {
+    position: absolute;
+    bottom: 0px;
+    height:40px;
+    width: 200px;
+}
+
+.navbar-btn {
+    margin-bottom:10px;
+}
+
+.no-min-width{
+    min-width: 0;
+}
+
+#navbarSupportedContent.show{
+    z-index: 111;
+    position: relative;
+    background: white;
+    border: 1px solid whitesmoke;
+}
+
+.navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus{
+    color: indigo;
+}
+
+@media  (min-width : 320px) and (max-width:700px)
+{
+    .left-margin-btns
+    {
+    font-size:22px;
+    }
+
+    .right-side-btns {
+        float: right;
+      /*   width: 40%; */
+    }
+
+    .teamlogo {
+        cursor: pointer;
+        margin-left: 20px;
+        height: 45px;
+        width: 90px;
+        align-self: center;  
+    }
+
+    #home-header-right button {
+        width:100%;
+        margin-top:5px;
+    }
+
+    #home-menu-caption {
+        display: inline-block;
+    }
+
+    .nav-item-btns{
+        font-size: 14px;
+    }
+
+    .app-header{
+        height: 130px;
+    }
+
+    .home-nav{
+        bottom: 15px;
+    }
+}
+
+@media  (min-width : 750px)
+{
+    .left-margin
+    {
+        font-size:22px;
+    }
+    .right-side-btns {
+        float: right;
+    }
+
+    .teamlogo {
+        cursor: pointer;
+        margin-left: 20px;
+        height: 45px;
+        width: 90px;
+        align-self: center;  
+    }
+    
+}
+
+@media (min-width : 1000px)
+{
+    .left-margin
+        {
+            font-size:34px;
+    }
+
+    .right-side-btns {
+            float: right;
+            /* width: 67%; */
+    }
+
+    .teamlogo {
+        cursor: pointer;
+        margin-left: 20px;
+        height: 75px;
+        width: 150px;
+        align-self: center;  
+    }
+    #home-menu-caption {
+        display: none;
+    }
+}
+
+
+
+
+
+

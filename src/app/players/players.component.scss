@@ -1,0 +1,82 @@
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .players-main{
+
+        margin-top:15px;
+        width: 80%;
+        justify-self: center;
+        overflow-wrap: break-word;
+    
+        ul {
+            list-style-type: none;
+            margin: 0;padding: 0;
+        
+            li {
+                background: #848484;
+                padding: 2em;
+                border-radius: 4px;
+                margin-bottom: 7px;
+                display: grid;
+                font-family: SourceSansProRegular,Helvetica,sans-serif;
+                color:whitesmoke;
+                grid-template-columns: 20% 20% 20% 20% 20% ;
+                background-image: url('../../assets/tableback.jpg');
+                p {
+                    font-weight: bold;
+                    margin-left: 20px;
+                    margin-bottom: 0;
+                    padding-top: 15px;
+                    
+                }
+        
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+
+            .header {
+                padding:0;
+                p{
+                    padding-top: 5px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-left: 54px;
+                    text-align: left; 
+                    text-decoration: underline;
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width:800px){
+    div .players-main {
+
+        font-size: 10px;
+        overflow-wrap: break-word;
+        ul .header p{
+            margin-left: 30px;
+            
+        }    
+    } 
+
+}
+
+@media (max-width:700px){
+    div .players-main {
+        
+        font-size: 6px;
+        overflow-wrap: break-word;
+
+        ul .header p{
+            margin-left: 20px;
+        }    
+    } 
+}
+
+#players-root-div{
+    margin-bottom: 30px;    
+}
