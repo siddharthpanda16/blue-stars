@@ -14,7 +14,10 @@
               <p> {{ user.address.street}} {{ user.address.suite}} {{ user.address.city}}</p>
               <!-- <p> {{ user.company.name}}</p> -->
               <p> {{ user.email}}</p>
-              <p> {{ user.phone}}</p>
+              <p> {{ user.phone}}<button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+                ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Stats">
+                <i class="fas fa-external-link-square-alt fa-lg"></i>
+               </button></p>
               <!-- <p> {{ user.website}}</p> -->
             </li>
           </ul>

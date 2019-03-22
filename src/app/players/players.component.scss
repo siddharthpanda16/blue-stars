@@ -28,9 +28,22 @@ div{
                     margin-left: 20px;
                     margin-bottom: 0;
                     padding-top: 15px;
+
+                    button{
+                        margin-left: 5px;
+                        padding: 0%;
+                        border:none;
+                        i{
+                            color:white;
+                        }
+                    }
+
                     
+
                 }
-        
+                
+                
+
                 img {
                     border-radius: 50%;
                     width: 100%;
@@ -79,4 +92,9 @@ div{
 
 #players-root-div{
     margin-bottom: 30px;    
+}
+
+.popContent{
+    color: black !important;
+    text-align: center;
 }

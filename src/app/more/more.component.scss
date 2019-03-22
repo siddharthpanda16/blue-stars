@@ -1,8 +1,16 @@
 
-.more-main{
+
+div{
     width: 100%;
-    display: flex;
-    margin-top: 2%;
+    //display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .more-main{
+            /* width: 100%;
+            display: flex;*/
+            margin-top: 2%; 
+        }
 
     .carousel-inner{
         max-width:1000px; max-height:600px !important;
@@ -11,14 +19,16 @@
         #carouselExampleIndicators{
             background-color: darkslategrey;
             margin-left: 2%;
-            position: fixed;
+            width: fit-content;
+            //position: fixed;
         }
     }
     @media (min-width:1100px){
         #carouselExampleIndicators{
             background-color: darkslategrey;
             margin-left: 18%;
-            position: fixed;
+            width: fit-content; 
+            //position: fixed;
         }
     }
     
@@ -28,8 +38,262 @@
         width: auto;
         object-fit: contain;
     }
+
+    h5{
+        margin-top:30px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .full{
+        align-self:flex-end;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .card{
+            margin-right: 64px;
+            margin-top: 14px;
+            left: 32px;        
+        }
+
+        .card-text{
+            max-height: 5rem;
+            min-height: 4.5rem;
+            overflow: auto;
+            margin: auto;
+        }
+
+       
+    }
+
+    .modal-header{
+        padding: 0px;
+    }
+
+    @media (max-width:700px){
+        .modal-dialog{
+            margin: 0;
+        }
+    }   
 }
 
+
+//name picker
+
+
+.modal-body{
+
+button:focus {
+    outline: none;
+}
+
+div#title {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+div#result {
+    font-size: 1.2em;
+    height: 50px;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+#draw {
+    color: #d84949;
+    border: solid 2px #d84949;
+    transition: 0.2s;
+}
+
+#draw:hover {
+    background-color: #d84949;
+    color: #ffffff;
+    border: solid 2px #d84949;
+    cursor: pointer;
+    transform: translateY(5px);
+}
+
+#remove {
+    color: #3769ba;
+    border: solid 2px #3769ba;
+    transition: 0.2s;
+}
+
+#remove:hover {
+    background-color: #3769ba;
+    color: #ffffff;
+    border: solid 2px #3769ba;
+    cursor: pointer;
+    transform: translateY(5px);
+
+}
+
+#possibilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+textarea {
+    background-color: #e5f7fc;
+    font-size: 1.1em;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: inherit;
+    border-color: #919191;
+    height: 100px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+}
+
+
+
+//team picker modal
+
+$background:  #DFDFDF;
+$primary:  #acc6c8;
+
+body { background-color: $background; font-family: 'Proza Libre', sans-serif; }
+
+.filters {
+  margin: 50px auto 0;
+  padding: 10px;
+  border-radius: 3px;
+  width: 300px;
+  height: 30px;
+  background-color: darken($primary, 20%);
+  box-shadow: 0px 3px 7px #AAA;
+  position: relative;
+  h2 {
+    color: lighten($primary, 20%);
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0;
+    line-height: 1.7em;
+  }
+  &__expand {
+    position: absolute;
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 1.1em;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    right: 12px;
+    top: 10px;
+    border-radius: 2px;
+    color: darken($primary, 20%);
+    cursor: pointer;
+    // padding: 10px;
+    background-color: lighten($primary, 5%);
+  }
+  &__list {
+    box-sizing: border-box;
+    position: absolute; left: 0; top: 125%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+    // box-shadow: 0px 2px 7px #CCC;
+  }
+  &__item {
+    position: relative;
+    display: block;
+    background-color: #EEE;
+    margin-bottom: 1px;
+    box-shadow: 0px 2px 7px #CCC;
+    color: #666;
+    &:last-child { margin: 0; }
+    label { 
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      padding: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    input[type=checkbox] ~ label:after {
+      font-family: 'Font Awesome 5 Free';
+      content: "\f00c";
+      font-size: 1.6em;
+      color: #CCC;
+      position: absolute;
+      margin: auto;
+      top: 12px; bottom: 0; right: 10px;
+    }
+    input[type=checkbox]:checked ~ label:after {
+      content: "\f00c";
+      // font-size: 2em;
+      color: #007F00;
+    }
+    input[type=checkbox] {
+      display: none;
+    }
+  }
+}
+
+#teamPickerModal{
+    .close{
+        right: 14px; position: relative;
+    }
+
+    .filters{
+        margin: auto;
+        padding: 0;
+        h2
+        {
+            text-align: center;
+        }
+    }
+    .modal-body{
+        height: 400px;
+        overflow: scroll;
+    }
+
+    
+}
 #more-root-div{
     margin-bottom: 30px;    
 }
